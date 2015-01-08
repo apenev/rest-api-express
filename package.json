@@ -1,6 +1,6 @@
 {
   "name": "rest-api-express",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "express.js",
   "scripts": {
@@ -18,9 +18,12 @@
   },
   "dependencies": {
     "body-parser": "1.9.2",
+    "debug": "^2.1.1",
+    "elasticsearch": "^3.1.1",
     "express": "4.10.1",
-    "mongoskin": "1.4.4",
-    "morgan": "1.5.0"
+    "morgan": "1.5.0",
+    "promise": "^6.0.1",
+    "q": "^1.1.2"
   },
   "devDependencies": {
     "expect.js": "0.3.1",
