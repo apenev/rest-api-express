@@ -1,0 +1,64 @@
+{
+  "ENV": "test",
+  "java": {
+    "jdk_version": "7",
+    "install_flavor": "oracle",
+    "oracle": {
+      "accept_oracle_download_terms": "true"
+    }
+  },
+  "elasticsearch": {
+    "discovery": {
+      "zen": {
+        "ping": {
+          "unicast": {
+            "hosts": "10.240.30.248:9300,10.240.175.36:9300"
+          },
+          "multicast": {
+            "enabled": "false"
+          }
+        }
+      }
+    },
+    "cluster": {
+      "name": "es-freeyup-test"
+    },
+    "version": "1.4.2",
+    "allocated_memory": "512m",
+    "plugins": {
+      "elasticsearch/elasticsearch-lang-javascript": {
+        "version": "2.4.1"
+      },
+      "elasticsearch/elasticsearch-river-wikipedia": {
+        "version": "2.4.1"
+      },
+      "mobz/elasticsearch-head": {}
+    },
+    "nginx": {
+      "port": 80,
+      "servername": "testing.freeyup.com",
+      "users": [
+        {
+          "username": "freeyup",
+          "password": "12345678"
+        }
+      ]
+    }
+  },
+  "restexpress": {
+    "elasticsearch": {
+      "hosts": [
+        {
+          "username": "freeyup",
+          "password": "12345678",
+          "address": "130.211.79.174"
+        },
+        {
+          "username": "freeyup",
+          "password": "12345678",
+          "address": "104.155.8.155"
+        }
+      ]
+    }
+  }
+}

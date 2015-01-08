@@ -1,0 +1,9 @@
+{
+  "elasticsearch": {
+    "hosts": [
+      "http://freeyup:12345678@130.211.79.174",
+      "http://freeyup:12345678@104.155.8.155"
+    ],
+    "log": "trace"
+  }
+}
